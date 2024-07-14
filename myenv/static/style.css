@@ -1,0 +1,11 @@
+:root{
+    --bg-color:#D6EFD8;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+label, input{
+    display: block;
+}

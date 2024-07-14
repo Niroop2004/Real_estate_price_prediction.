@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Input Example</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h2>Enter your text:</h2>
+  <form method="POST">
+
+    <label> Crim <input type="text" pattern="^-?\d*\.?\d+$" name="crim" title="Please enter a valid number"></label>
+
+    <label> Zn <input type="text" pattern="^-?\d*\.?\d+$" name="zn" title="Please enter a valid number"></label>
+
+    <label> Indus <input type="text" pattern="^-?\d*\.?\d+$" name="indus" title="Please enter a valid number"></label>
+
+    <label> Rm <input type="text" pattern="^-?\d*\.?\d+$" name="rm" title="Please enter a valid number"></label>
+
+    <label> Age <input type="text" pattern="^-?\d*\.?\d+$" name="age" title="Please enter a valid number"></label>
+
+    <label> Dist <input type="text" pattern="^-?\d*\.?\d+$" name="dist" title="Please enter a valid number"></label>
+
+    <label> PTR <input type="text" pattern="^-?\d*\.?\d+$" name="ptr" title="Please enter a valid number"></label>
+
+    <label> LSTAT <input type="text" pattern="^-?\d*\.?\d+$" name="lstat" title="Please enter a valid number"></label>
+
+
+    <button type="submit">Submit</button>
+
+
+  </form>
+  <br>
+  <p>The predicted price is: {{ price }}</p>
+
+  <!-- <style>
+    label,input{
+      display: block;
+    }
+  </style> -->
+</body>
+</html>
