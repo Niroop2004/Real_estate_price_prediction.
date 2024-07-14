@@ -2,14 +2,14 @@
 <html>
 
 <head>
-    <title>HOML</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>User Input Example</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="logo-container">
-        <img src="../static/homl_2800.svg">
+        <img src="homl_2800.svg">
         <p class="desc">This advanced tool empowers real estate agents with precise property valuations by incorporating
             a wide range of influential factors. Beyond traditional metrics like property size and location, it
             considers critical elements such as crime rates, pupil-teacher ratios, and accessibility for employees.
@@ -71,12 +71,14 @@
                     title="Please enter a valid number" placeholder="In percentage" autocomplete="off"></label>
 
 
-            <button type="submit">Submit</button>
+            
 
         </form>
 
         <!-- <p>The predicted price is: {{ price }}</p> -->
          <div class="price-container">
+            <button type="submit">Submit</button>
+            
              <h2>
                 The predicted price is
              </h2>

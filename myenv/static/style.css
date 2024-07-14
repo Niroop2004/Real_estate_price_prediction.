@@ -21,14 +21,16 @@
 
 }
 
+::-webkit-scrollbar{display: none;}
+
 body{
     background-color: var(--bg-color);
     color: var(--accent);
     font-weight: var(--deffontwght);
     font-family: var(--fontfam);
     margin-right: 3vw;
-    margin-left: 3vw;
-    margin-top: 7.5vh;
+    margin-left: 0vw;
+    margin-top: 5vh;
     user-select: none;
     margin-bottom: 9vh;
 }
@@ -42,37 +44,36 @@ label, input{
 form{
     display: flex;
     flex-direction: row;
-    gap: 5vh;
+    gap: 3vh;
     max-width: 90vw;
     flex-wrap: wrap;
     max-height: 15vh;
-    justify-content: space-evenly;
+    justify-content:space-between;
+    justify-content: center;
 }
 
 .form-container{
     position: absolute;
     right: 0;
-    margin-right: 3vw;
+    margin-right: 5vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction:column;
 }
 
-button{
-    font-size: 1vw;
-}
 
 input{
     background-color: transparent;
     border: 1.5px solid #1A5319;
-    border-radius: 1vh;
+    border-radius: 3vw;
     padding: 1.5vh 1vw;
     margin-top: 1vh;
     margin-bottom: 1vh;
     font-family: var(--fontfam);
     color: var(--accen);
-    width: 18vw;
+    width: 72vw;
+    font-size: var(--phofntsize);
 }
 
 
@@ -81,8 +82,8 @@ input::placeholder{
 }
 
 img{
-    height: 45vh;
-    width: auto;
+    height:auto;
+    width: 60vw;
 }
 
 .logo-container{
@@ -94,34 +95,38 @@ img{
 
 .desc{
     font-size: 1.2vw;
-    max-width: 60vw;
+    max-width: 75vw;
     text-align: justify;
     color: black;
+    margin-top: 3vh;
 }
 
 label{
     font-weight: 700;
+    font-size: var(--phofntsize);
 }
 
 h1{
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.1cm;
-    font-size: 3vw;
+    font-size: 6vw;
     padding-bottom: 3vh;
 }
 
 button{
     background-color: transparent;
     border: 1px solid #1A5319;
-    padding: 2vh 1.5vw;
+    padding: 1.8vh 7vw;
     font-family: var(--fontfam);
     font-weight: 700;
-    border-radius: 1vw;
-    font-size: 1.15vw;
+    border-radius: 3vw;
+    font-size: 4vw;
     color: var(--accent);
     display: block;
+    margin-bottom: 3vh;
 }
+
 
 p{
     display: block;
@@ -138,18 +143,109 @@ button:hover{
     flex-direction: column;
     align-items: center;
     position: relative;
-    top: 24vh;
+    top: 85vh;
     /* border: 1.8px solid #1A5319; */
     padding: 4vh 4vw;
     border-radius: 1vw;
-    margin-bottom: 25vh;
-    padding-bottom: 11vh ;
+    margin-bottom: 15vh;
+    padding-bottom: 7vh ;
 }
 
 h2{
-    font-size: 1.8vw;
+    font-size: 5vw;
 }
 
 .price{
-    font-size: 1.5vw;
+    font-size: 6vw;
+}
+
+
+@media screen and (min-width: 1080px){
+    body{
+        margin-right: 3vw;
+        margin-left: 3vw;
+        margin-top: 7.5vh;
+        margin-bottom: 9vh;
+    }
+    
+    label, input{
+        font-size: var(--lapfntsize);
+    }
+    
+    form{
+        gap: 5vh;
+        max-width: 90vw;
+        max-height: 15vh;
+        flex-direction: row;
+    }
+    
+    .form-container{
+        right: 0;
+        margin-right: 4.8vw;
+        flex-direction:column;
+    }
+    
+    
+    input{
+        border: 1.5px solid #1A5319;
+        border-radius: 1vh;
+        padding: 1.5vh 1vw;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        width: 18vw;
+    }
+    
+    
+    img{
+        height: 45vh;
+        width: auto;
+    }
+    
+    .logo-container{
+        flex-direction: column;
+    }
+    
+    .desc{
+        font-size: 1.2vw;
+        max-width: 60vw;
+        color: black;
+    }
+    
+    label{
+        font-weight: 700;
+    }
+    
+    h1{
+        font-weight: 900;
+        font-size: 3vw;
+        padding-bottom: 3vh;
+    }
+    
+    button{
+        border: 1px solid #1A5319;
+        padding: 2vh 1.5vw;
+        font-weight: 700;
+        border-radius: 1vw;
+        font-size: 1.15vw;
+        margin-bottom: 5vh;
+    }
+    
+    .price-container{
+        flex-direction: column;
+        top: 19vh;
+        /* border: 1.8px solid #1A5319; */
+        padding: 4vh 4vw;
+        border-radius: 1vw;
+        margin-bottom: 15vh;
+        padding-bottom: 11vh ;
+    }
+    
+    h2{
+        font-size: 1.8vw;
+    }
+    
+    .price{
+        font-size: 1.8vw;
+    }
+    
 }
