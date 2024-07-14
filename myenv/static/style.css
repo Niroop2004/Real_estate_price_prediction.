@@ -12,7 +12,7 @@
 
 /*Font weight*/
     --deffontwght: 400 ;
-    
+
 /*Font size - phones*/
     --phofntsize : 4vw ;
 
@@ -48,7 +48,6 @@ form{
     max-width: 90vw;
     flex-wrap: wrap;
     max-height: 15vh;
-    justify-content:space-between;
     justify-content: center;
 }
 
@@ -67,11 +66,11 @@ input{
     background-color: transparent;
     border: 1.5px solid #1A5319;
     border-radius: 3vw;
-    padding: 1.5vh 1vw;
+    padding: 1.5vh 2.4vw;
     margin-top: 1vh;
     margin-bottom: 1vh;
     font-family: var(--fontfam);
-    color: var(--accen);
+    color: var(--accent);
     width: 72vw;
     font-size: var(--phofntsize);
 }
@@ -94,8 +93,8 @@ img{
 }
 
 .desc{
-    font-size: 1.2vw;
-    max-width: 75vw;
+    font-size: 3.6vw;
+    max-width: 78vw;
     text-align: justify;
     color: black;
     margin-top: 3vh;
@@ -142,8 +141,6 @@ button:hover{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    top: 85vh;
     /* border: 1.8px solid #1A5319; */
     padding: 4vh 4vw;
     border-radius: 1vw;
@@ -167,25 +164,25 @@ h2{
         margin-top: 7.5vh;
         margin-bottom: 9vh;
     }
-    
+
     label, input{
         font-size: var(--lapfntsize);
     }
-    
+
     form{
         gap: 5vh;
         max-width: 90vw;
         max-height: 15vh;
         flex-direction: row;
     }
-    
+
     .form-container{
         right: 0;
         margin-right: 4.8vw;
         flex-direction:column;
     }
-    
-    
+
+
     input{
         border: 1.5px solid #1A5319;
         border-radius: 1vh;
@@ -194,33 +191,33 @@ h2{
         margin-bottom: 1vh;
         width: 18vw;
     }
-    
-    
+
+
     img{
         height: 45vh;
         width: auto;
     }
-    
+
     .logo-container{
         flex-direction: column;
     }
-    
+
     .desc{
         font-size: 1.2vw;
         max-width: 60vw;
         color: black;
     }
-    
+
     label{
         font-weight: 700;
     }
-    
+
     h1{
         font-weight: 900;
         font-size: 3vw;
         padding-bottom: 3vh;
     }
-    
+
     button{
         border: 1px solid #1A5319;
         padding: 2vh 1.5vw;
@@ -229,7 +226,7 @@ h2{
         font-size: 1.15vw;
         margin-bottom: 5vh;
     }
-    
+
     .price-container{
         flex-direction: column;
         top: 19vh;
@@ -239,13 +236,13 @@ h2{
         margin-bottom: 15vh;
         padding-bottom: 11vh ;
     }
-    
+
     h2{
         font-size: 1.8vw;
     }
-    
+
     .price{
         font-size: 1.8vw;
     }
-    
+
 }

@@ -2,14 +2,14 @@
 <html>
 
 <head>
-    <title>User Input Example</title>
-    <link rel="stylesheet" href="style.css">
+    <title>HOML</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
     <div class="logo-container">
-        <img src="homl_2800.svg">
+        <img src="../static/homl_2800.svg">
         <p class="desc">This advanced tool empowers real estate agents with precise property valuations by incorporating
             a wide range of influential factors. Beyond traditional metrics like property size and location, it
             considers critical elements such as crime rates, pupil-teacher ratios, and accessibility for employees.
@@ -35,27 +35,31 @@
 
         <form method="POST">
 
-            <label> Crime rate :<input type="text" pattern="^-?\d*\.?\d+$" name="crim" placeholder="In percentage"
-                    title="Please enter a valid number"></label>
+            <label> Crime rate :
+                <input type="text" pattern="^-?\d*\.?\d+$" name="crim" placeholder="In percentage" autocomplete="off" required>
+            </label>
 
-            <label> Land zoned for residential properties :<input type="text" pattern="^-?\d*\.?\d+$" name="zn"
-                    title="Please enter a valid number" placeholder="Greater than 25,000 Sq ft"></label>
+            <label> Land zoned for residential properties :
+                <input type="text" pattern="^-?\d*\.?\d+$" name="zn" required placeholder="Greater than 25,000 Sq ft" autocomplete="off">
+            </label>
 
-            <label> Proportion of non-proportional business : <input type="text" pattern="^-?\d*\.?\d+$" name="indus"
-                    title="Please enter a valid number" placeholder="Acre per town"></label>
+            <label> Proportion of non-proportional business : 
+                <input type="text" pattern="^-?\d*\.?\d+$" name="indus" required placeholder="Acre per town" autocomplete="off">
+            </label>
 
-            <label> Average number of rooms : <input type="text" pattern="^-?\d*\.?\d+$" name="rm"
-                    title="Please enter a valid number" placeholder="Per dwelling"></label>
+            <label> Average number of rooms : 
+                <input type="text" pattern="^-?\d*\.?\d+$" name="rm" required placeholder="Per dwelling" autocomplete="off">
+            </label>
 
-            <label> Propertion of owner occupied units :<input type="text" pattern="^-?\d*\.?\d+$" name="age"
-                    title="Please enter a valid number" placeholder="Built prior to 1940"></label>
+            <label> Propertion of owner occupied units :
+                <input type="text" pattern="^-?\d*\.?\d+$" name="age" required placeholder="Built prior to 1940" autocomplete="off">
+            </label>
 
             <label>
 
                 Weighted distances :
 
-                <input type="text" pattern="^-?\d*\.?\d+$" name="dist"
-                    title="Please enter a valid number" placeholder="Accessibility to employment">
+                <input type="text" pattern="^-?\d*\.?\d+$" name="dist" required placeholder="Accessibility to employment" autocomplete="off">
                 
                 </label>
 
@@ -63,30 +67,29 @@
 
                 Pupil-teacher ratio :
 
-                <input type="text" pattern="^-?\d*\.?\d+$" name="ptr" title="Please enter a valid number" placeholder="By town" autocomplete="off">
+                <input type="text" pattern="^-?\d*\.?\d+$" name="ptr" required placeholder="By town" autocomplete="off">
 
                 </label>
 
-            <label> Lower status of the population :<input type="text" pattern="^-?\d*\.?\d+$" name="lstat"
-                    title="Please enter a valid number" placeholder="In percentage" autocomplete="off"></label>
+            <label> Lower status of the population :<input type="text" pattern="^-?\d*\.?\d+$" name="lstat" required placeholder="In percentage" autocomplete="off"></label>
 
-
+                    <div class="price-container">
+                        <button type="submit">Submit</button>
+                        
+                         <h2>
+                            The predicted price is
+                         </h2>
+                
+                         <span class="price">
+                            ₹{{ price }}
+                         </span>
+                     </div>
             
 
         </form>
 
         <!-- <p>The predicted price is: {{ price }}</p> -->
-         <div class="price-container">
-            <button type="submit">Submit</button>
-            
-             <h2>
-                The predicted price is
-             </h2>
-    
-             <span class="price">
-                ₹{{ price }}
-             </span>
-         </div>
+         
 
     </div>
 
