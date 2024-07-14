@@ -1,11 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 :root{
+/*Web page background*/
     --bg-color:#D6EFD8;
+
+/*Web page accent*/
+    --accent:#1A5319;
+
+/*Font family*/
+    --fontfam:"Nunito", sans-serif;
+
+/*Font weight*/
+    --deffontwght: 400 ;
+    
+/*Font size - phones*/
+    --phofntsize : 4vw ;
+
+/*Font size - laptop*/
+    --lapfntsize: 1.15vw;
+
 }
 
 body{
     background-color: var(--bg-color);
+    color: var(--accent);
+    font-weight: var(--deffontwght);
+    font-family: var(--fontfam);
+    margin-right: 3vw;
+    margin-left: 3vw;
+    margin-top: 7.5vh;
+    user-select: none;
+    margin-bottom: 9vh;
 }
 
 label, input{
     display: block;
+    font-size: var(--lapfntsize);
+    font-family: var(--fontfam);
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    gap: 5vh;
+    max-width: 90vw;
+    flex-wrap: wrap;
+    max-height: 15vh;
+    justify-content: space-evenly;
+}
+
+.form-container{
+    position: absolute;
+    right: 0;
+    margin-right: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+
+button{
+    font-size: 1vw;
+}
+
+input{
+    background-color: transparent;
+    border: 1.5px solid #1A5319;
+    border-radius: 1vh;
+    padding: 1.5vh 1vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-family: var(--fontfam);
+    color: var(--accen);
+    width: 18vw;
+}
+
+
+input::placeholder{
+    color: #80AF81;
+}
+
+img{
+    height: 45vh;
+    width: auto;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.desc{
+    font-size: 1.2vw;
+    max-width: 60vw;
+    text-align: justify;
+    color: black;
+}
+
+label{
+    font-weight: 700;
+}
+
+h1{
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1cm;
+    font-size: 3vw;
+    padding-bottom: 3vh;
+}
+
+button{
+    background-color: transparent;
+    border: 1px solid #1A5319;
+    padding: 2vh 1.5vw;
+    font-family: var(--fontfam);
+    font-weight: 700;
+    border-radius: 1vw;
+    font-size: 1.15vw;
+    color: var(--accent);
+    display: block;
+}
+
+p{
+    display: block;
+}
+
+button:hover{
+    background-color: #1A5319;
+    color: var(--bg-color);
+}
+
+.price-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 24vh;
+    /* border: 1.8px solid #1A5319; */
+    padding: 4vh 4vw;
+    border-radius: 1vw;
+    margin-bottom: 25vh;
+    padding-bottom: 11vh ;
+}
+
+h2{
+    font-size: 1.8vw;
+}
+
+.price{
+    font-size: 1.23vw;
 }

@@ -1,41 +1,96 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>User Input Example</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>HOML</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
-  <h2>Enter your text:</h2>
-  <form method="POST">
 
-    <label> Crim <input type="text" pattern="^-?\d*\.?\d+$" name="crim" title="Please enter a valid number"></label>
+    <div class="logo-container">
+        <img src="../static/homl_2800.svg">
+        <p class="desc">This advanced tool empowers real estate agents with precise property valuations by incorporating
+            a wide range of influential factors. Beyond traditional metrics like property size and location, it
+            considers critical elements such as crime rates, pupil-teacher ratios, and accessibility for employees.
+            <br>
+            <br>
+            Trained on a robust dataset, the tool employs sophisticated machine learning algorithms to generate accurate
+            valuations. By inputting property details, agents can quickly obtain reliable estimates to support informed
+            decision-making.
+            <br>
+            <br>
+            Built with a user-friendly Flask and HTML interface, the tool offers a seamless experience for real estate
+            professionals. This innovative solution not only saves time but also enhances agent credibility by providing
+            data-driven insights.
+        </p>
+    </div>
+    <br>
+    <br>
 
-    <label> Zn <input type="text" pattern="^-?\d*\.?\d+$" name="zn" title="Please enter a valid number"></label>
+    <div class="form-container">
 
-    <label> Indus <input type="text" pattern="^-?\d*\.?\d+$" name="indus" title="Please enter a valid number"></label>
+        <h1>Predict now!</h1>
+        <br>
 
-    <label> Rm <input type="text" pattern="^-?\d*\.?\d+$" name="rm" title="Please enter a valid number"></label>
+        <form method="POST">
 
-    <label> Age <input type="text" pattern="^-?\d*\.?\d+$" name="age" title="Please enter a valid number"></label>
+            <label> Crime rate :<input type="text" pattern="^-?\d*\.?\d+$" name="crim" placeholder="In percentage"
+                    title="Please enter a valid number"></label>
 
-    <label> Dist <input type="text" pattern="^-?\d*\.?\d+$" name="dist" title="Please enter a valid number"></label>
+            <label> Land zoned for residential properties :<input type="text" pattern="^-?\d*\.?\d+$" name="zn"
+                    title="Please enter a valid number" placeholder="Greater than 25,000 Sq ft"></label>
 
-    <label> PTR <input type="text" pattern="^-?\d*\.?\d+$" name="ptr" title="Please enter a valid number"></label>
+            <label> Proportion of non-proportional business : <input type="text" pattern="^-?\d*\.?\d+$" name="indus"
+                    title="Please enter a valid number" placeholder="Acre per town"></label>
 
-    <label> LSTAT <input type="text" pattern="^-?\d*\.?\d+$" name="lstat" title="Please enter a valid number"></label>
+            <label> Average number of rooms : <input type="text" pattern="^-?\d*\.?\d+$" name="rm"
+                    title="Please enter a valid number" placeholder="Per dwelling"></label>
+
+            <label> Propertion of owner occupied units :<input type="text" pattern="^-?\d*\.?\d+$" name="age"
+                    title="Please enter a valid number" placeholder="Built prior to 1940"></label>
+
+            <label>
+
+                Weighted distances :
+
+                <input type="text" pattern="^-?\d*\.?\d+$" name="dist"
+                    title="Please enter a valid number" placeholder="Accessibility to employment">
+                
+                </label>
+
+            <label>
+
+                Pupil-teacher ratio :
+
+                <input type="text" pattern="^-?\d*\.?\d+$" name="ptr" title="Please enter a valid number" placeholder="By town" autocomplete="off">
+
+                </label>
+
+            <label> Lower status of the population :<input type="text" pattern="^-?\d*\.?\d+$" name="lstat"
+                    title="Please enter a valid number" placeholder="In percentage" autocomplete="off"></label>
 
 
-    <button type="submit">Submit</button>
+            <button type="submit">Submit</button>
+
+        </form>
+
+        <!-- <p>The predicted price is: {{ price }}</p> -->
+         <div class="price-container">
+             <h2>
+                The predicted price is
+             </h2>
+    
+             <span class="price">
+                ₹{{ price }}
+             </span>
+         </div>
+
+    </div>
 
 
-  </form>
-  <br>
-  <p>The predicted price is: {{ price }}</p>
-
-  <!-- <style>
-    label,input{
-      display: block;
-    }
-  </style> -->
+    <br>
+    
 </body>
+
 </html>
