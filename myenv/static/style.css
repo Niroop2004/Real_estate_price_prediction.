@@ -2,10 +2,10 @@
 
 :root{
 /*Web page background*/
-    --bg-color:#D6EFD8;
+    --bg-color:black;
 
 /*Web page accent*/
-    --accent:#1A5319;
+    --accent:white;
 
 /*Font family*/
     --fontfam:"Nunito", sans-serif;
@@ -24,7 +24,11 @@
 ::-webkit-scrollbar{display: none;}
 
 body{
-    background-color: var(--bg-color);
+    /* background-color: var(--bg-color); */
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../static/phone_png.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
     color: var(--accent);
     font-weight: var(--deffontwght);
     font-family: var(--fontfam);
@@ -64,7 +68,7 @@ form{
 
 input{
     background-color: transparent;
-    border: 1.5px solid #1A5319;
+    border: 1.5px solid white;
     border-radius: 3vw;
     padding: 1.5vh 2.4vw;
     margin-top: 1vh;
@@ -77,7 +81,7 @@ input{
 
 
 input::placeholder{
-    color: #80AF81;
+    color: rgb(255,255,255,0.6);
 }
 
 img{
@@ -96,7 +100,7 @@ img{
     font-size: 3.6vw;
     max-width: 78vw;
     text-align: justify;
-    color: black;
+    color: white;
     margin-top: 3vh;
 }
 
@@ -115,7 +119,7 @@ h1{
 
 button{
     background-color: transparent;
-    border: 1px solid #1A5319;
+    border: 1px solid white;
     padding: 1.8vh 7vw;
     font-family: var(--fontfam);
     font-weight: 700;
@@ -132,7 +136,7 @@ p{
 }
 
 button:hover{
-    background-color: #1A5319;
+    background-color: white;
     color: var(--bg-color);
 }
 
@@ -159,6 +163,7 @@ h2{
 
 @media screen and (min-width: 1080px){
     body{
+        background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../static/house_svg.svg');
         margin-right: 3vw;
         margin-left: 3vw;
         margin-top: 7.5vh;
@@ -184,7 +189,7 @@ h2{
 
 
     input{
-        border: 1.5px solid #1A5319;
+        border: 1.5px solid white;
         border-radius: 1vh;
         padding: 1.5vh 1vw;
         margin-top: 1vh;
@@ -196,6 +201,7 @@ h2{
     img{
         height: 45vh;
         width: auto;
+        padding-bottom: 2vh;
     }
 
     .logo-container{
@@ -205,7 +211,7 @@ h2{
     .desc{
         font-size: 1.2vw;
         max-width: 60vw;
-        color: black;
+        color: white;
     }
 
     label{
@@ -219,7 +225,7 @@ h2{
     }
 
     button{
-        border: 1px solid #1A5319;
+        border: 1px solid white;
         padding: 2vh 1.5vw;
         font-weight: 700;
         border-radius: 1vw;
@@ -235,6 +241,8 @@ h2{
         border-radius: 1vw;
         margin-bottom: 15vh;
         padding-bottom: 11vh ;
+        position: relative;
+        top: 1vh;
     }
 
     h2{
