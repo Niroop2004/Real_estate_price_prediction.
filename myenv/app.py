@@ -71,7 +71,7 @@ def index():
             input_data = np.array([validate_input(data)])
             input_data_prepared = housing_pipeline.transform(input_data)
             prediction = model.predict(input_data_prepared)
-            price = prediction[0] * 1000 * 83.52
+            price = round(prediction[0] * 1000 * 83.52, 2)
             return render_template('test.html', crim=data[0], zn=data[1], indus=data[2], rm=data[3], age=data[4], dist=data[5], ptr=data[6], lstat=data[7], price=price)
         except ValueError as e:
             return render_template('test.html', error_message=str(e))
